@@ -8,6 +8,7 @@ import Contact from "./pages/Contact.tsx";
 import Products from "./pages/Products.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Header from "./layout/Header.tsx";
+import ProductDetails from "./pages/ProductDetails.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>,
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails></ProductDetails>,
       },
       {
         path: "*",
