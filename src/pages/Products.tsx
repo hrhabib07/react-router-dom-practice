@@ -1,5 +1,9 @@
-import { Key, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard, { TProduct } from "../components/ProductCard";
+
+export type TProducts = {
+  products: TProduct[];
+};
 
 const Products = () => {
   const [products, setProducts] = useState({});
@@ -17,7 +21,7 @@ const Products = () => {
   return (
     <div>
       <h1>Hello, From Products!</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {isLoading && <p>Data is loading...</p>}
         {error && <p>{error}</p>}
         {!isLoading &&
