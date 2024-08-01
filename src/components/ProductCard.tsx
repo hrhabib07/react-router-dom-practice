@@ -17,7 +17,9 @@ const ProductCard = ({ product }: TProduct) => {
     product;
   return (
     <div className="border p-4">
-      <img src={thumbnail} alt="" />
+      <div className="flex justify-center ">
+        <img src={thumbnail} alt="" />
+      </div>
       <h2 className="text-xl font-medium">{title}</h2>
       <p className="text-gray-500">{description.substring(0, 100)}...</p>
       <p>Ratting: {rating}</p>
