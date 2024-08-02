@@ -39,8 +39,6 @@ const Products = () => {
     setCurrentPage(1);
   }, [currentPage, searchedText]);
 
-  // search logic starts here
-
   return (
     <div>
       <h1>Hello, From Products!</h1>
